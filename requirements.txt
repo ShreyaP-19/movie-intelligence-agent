@@ -1,0 +1,10 @@
+anthropic>=0.40
+chromadb>=0.5
+sentence-transformers>=3.0
+rank-bm25>=0.2.2
+mcp>=1.2
+streamlit>=1.35
+python-dotenv>=1.0
+numpy
+pytest>=8
+-e .

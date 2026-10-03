@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "movie-intelligence-agent"
+version = "0.1.0"
+description = "Subtitle RAG + MCP email agent for movie questions"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.40",
+    "chromadb>=0.5",
+    "sentence-transformers>=3.0",
+    "rank-bm25>=0.2.2",
+    "mcp>=1.2",
+    "streamlit>=1.35",
+    "python-dotenv>=1.0",
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+movie-ingest = "movie_agent.ingest:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

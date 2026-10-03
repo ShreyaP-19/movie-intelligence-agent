@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+*.egg-info/
+chroma_db/
+outbox/
+data/catalog.json
+data/subtitles/*
+!data/subtitles/README.md
+.pytest_cache/
